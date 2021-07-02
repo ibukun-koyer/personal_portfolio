@@ -51,7 +51,7 @@ function createCodeSpace(text) {
   return codeSpace;
 }
 function createEmbed(id) {
-  return `http://www.youtube.com/embed/${id}`;
+  return `https://www.youtube.com/embed/${id}`;
 }
 function absolutePath(name) {
   return `./media/${name}`;

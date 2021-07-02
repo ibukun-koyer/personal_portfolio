@@ -469,6 +469,7 @@ body {
 .containSkillImg {
   width: 100%;
   display: flex;
+  justify-content: flex-end;
   flex-wrap: wrap;
   user-select: none;
 }
@@ -609,8 +610,6 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  /* overflow-y: auto;
-  overflow-x: hidden; */
 }
 .skillsArticle {
   text-align: end;
@@ -1177,7 +1176,7 @@ body {
   }
 }
 /* page 2 */
-@media (max-width: 304px) {
+@media (max-width: 406px) {
   .aboutMeArticle p {
     font-size: 0.8rem;
   }
