@@ -12,9 +12,6 @@ function resizePanels() {
         i.style.minHeight = window.innerHeight + "px";
       }
     });
-  } else {
-    i.style.minHeight =
-      Math.max(window.innerHeight, document.body.clientHeight) + "px";
   }
 }
 resizePanels();
