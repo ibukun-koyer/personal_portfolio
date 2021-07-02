@@ -168,6 +168,9 @@ body {
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.panel {
+  min-height: 100vh;
+}
 .right {
   top: 0;
   right: 0;
@@ -606,8 +609,8 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
+  /* overflow-y: auto;
+  overflow-x: hidden; */
 }
 .skillsArticle {
   text-align: end;
