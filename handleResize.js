@@ -12,6 +12,8 @@ function resizePanels() {
         i.style.minHeight = window.innerHeight + "px";
       }
     });
+  } else {
+    i.style.minHeight = screen.height + "px";
   }
 }
 resizePanels();
