@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ibukun | Portfolio</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://th.bing.com/th/id/R63f870862e5592f1b01d0f71aacbaeec?rik=cdHQQRczIYKdDQ&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fdownload_305654.png&ehk=j%2b%2bDwli4kDHtbhOqocqK8EfWcU5XKK88LPMvTh203%2bg%3d&risl=&pid=ImgRaw"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- page 1 -->
+
+    <div class="top">
+      <span class="optionBar">
+        <span class="title visible">Ibukun</span>
+        <div style="box-sizing: border-box"></div>
+      </span>
+
+      <div class="wrapOption fixed right">
+        <div class="opt">
+          <div class="nav1"><span class="jmp">About Me</span></div>
+          <div class="nav2"><span class="jmp">Skills</span></div>
+          <div class="nav3"><span class="jmp">Projects</span></div>
+          <div class="nav4"><span class="jmp">Contact Me</span></div>
+        </div>
+      </div>
+
+      <div class="connect">
+        <a href="https://www.instagram.com/random_n_p_c/" target="_blank"
+          ><i class="fa fa-instagram" aria-hidden="true"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/ibukun-adekoya-007b331a2/" target="_blank"
+          ><i class="fa fa-linkedin-square" aria-hidden="true"></i></i
+        ></a>
+        <a href="https://github.com/ibukun-koyer" target="_blank"
+         class="gitAnchor" ><i class="fa fa-github-square" aria-hidden="true"></i
+        ></a>
+      </div>
+    </div>
+
+    <div class="panel bkg" id="home">
+      <div class="title visible">Ibukun</div>
+      <div class="containIntro">
+        <article class="homeInfo">
+          <div class="tag homeText">&lt;H1&gt;</div>
+          <h1 style="margin: 1px" class="titleHeader">
+            <div>
+              <div class="homeText">HELLO, WORLD</div>
+              <div class="homeText">
+                I'M
+                <span class="myName">IBUKUN ADEKOYA</span>.
+              </div>
+              <div class="roles homeText">
+                Front-end developer | Back-end developer
+              </div>
+            </div>
+          </h1>
+          <div class="tag homeText">&lt;/H1&gt;</div>
+        </article>
+      </div>
+    </div>
+    <!-- page 2 -->
+    <div class="aboutme panel" id="aboutme">
+      <section class="containAboutMe">
+        <div class="aboutMeTxt">
+          <div class="bkgText">&lt;About Me /&gt;</div>
+          <article class="aboutMeArticle">
+            <h2>About Me</h2>
+            <p>
+              My name is <span class="colorMe">Ibukun Adekoya</span>. I am a 21
+              year old male from <span class="colorMe">Nigeria</span>. I am
+              currently a senior student majoring in computer science at the
+              <span class="colorMe"
+                >university of Maryland, Baltimore county</span
+              >.
+            </p>
+            <p>
+              When I am not writing code, I usually find myself watching
+              <span class="colorMe">tv shows</span>, and creating
+              <span class="colorMe">three dimensional renders</span>.
+            </p>
+            <button class="resumeDownload">Access my résumé</button>
+          </article>
+        </div>
+        <div class="myImage">
+          <div class="imageColorOne"></div>
+          <div class="imageColorTwo"></div>
+          <div class="imageHolder">
+            <img
+              src="./images/IMG_7050.jpeg"
+              alt="my profile"
+            />
+          </div>
+        </div>
+        <i class="las la-angle-left direction0"></i>
+        <i class="las la-angle-left direction1"></i>
+        <div class="pageRadio">
+          <input type="radio" name="selected" class="selectedPage" />
+          <input type="radio" name="selected" class="selectedPage" />
+        </div>
+      </section>
+    </div>
+    <!-- page 3 -->
+    <div class="skills panel" id="skills">
+      <canvas width="500" height="500" class="skillsCanvas"></canvas>
+      <section class="containSkills">
+        <div class="myGraph">
+          <!-- <canvas class='graphHolder'></canvas> -->
+          <div class="graphHolder">
+            <!-- y axis -->
+            <div class="graphLanguages graphLoc1">
+              <img
+                src="https://seeklogo.com/images/C/c-programming-language-logo-9B32D017B1-seeklogo.com.png"
+                alt="c"
+              />
+            </div>
+            <div class="graphLanguages graphLoc2">
+              <img
+                src="https://images.vexels.com/media/users/3/166253/isolated/preview/14bc03b7b1c2c4e2656fd4c0a981cbbc-cpp-programming-language-icon-by-vexels.png"
+                alt="c++"
+              />
+            </div>
+            <div class="graphLanguages graphLoc3">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/1200px-Javascript-shield.svg.png"
+                alt="javascript"
+              />
+            </div>
+            <div class="graphLanguages graphLoc4">
+              <img
+                src="https://cdn.freebiesupply.com/logos/large/2x/css-3-logo-png-transparent.png"
+                alt="css"
+              />
+            </div>
+            <div class="graphLanguages graphLoc5">
+              <img
+                src="https://images.vexels.com/media/users/3/166383/isolated/preview/6024bc5746d7436c727825dc4fc23c22-html-programming-language-icon-by-vexels.png"
+                alt="html"
+              />
+            </div>
+            <div class="graphLanguages graphLoc6">
+              <img
+                src="https://image.flaticon.com/icons/png/512/919/919851.png"
+                alt="react"
+              />
+            </div>
+            <div class="graphLanguages graphLoc7">
+              <img
+                src="https://aca.am/assets/img/nodejs/node-js-icon.png"
+                alt="node.js"
+              />
+            </div>
+            <div class="graphLanguages graphLoc8">
+              <img
+                src="https://justinlross.com.au/wp-content/uploads/2018/04/python-logo.png"
+                alt="python"
+              />
+            </div>
+            <div class="graphLanguages graphLoc9">
+              <img
+                src="https://cms-assets.tutsplus.com/uploads/users/1116/posts/24835/preview_image/mongodb-logo.png"
+                alt="mongodb"
+              />
+            </div>
+            <div class="graphLanguages graphLoc10">
+              <img
+                src="https://microblock.app/images/logo/firebase-logo.png"
+                alt="firebase"
+              />
+            </div>
+
+            <!-- x axis -->
+            <div class="experience exp1">Beginner</div>
+            <div class="experience exp2">Average</div>
+            <div class="experience exp3">Expert</div>
+
+            <!-- create Full bar design -->
+            <div class="fullBar fullBar1"></div>
+            <div class="fullBar fullBar2"></div>
+            <div class="fullBar fullBar3"></div>
+            <div class="fullBar fullBar4"></div>
+            <div class="fullBar fullBar5"></div>
+            <div class="fullBar fullBar6"></div>
+            <div class="fullBar fullBar7"></div>
+            <div class="fullBar fullBar8"></div>
+            <div class="fullBar fullBar9"></div>
+            <div class="fullBar fullBar10"></div>
+
+            <!-- create actual graphBars -->
+
+            <div class="barStart" style="grid-row: 2"></div>
+            <div class="barStart" style="grid-row: 3"></div>
+            <div class="barStart" style="grid-row: 4"></div>
+            <div class="barStart" style="grid-row: 5"></div>
+            <div class="barStart" style="grid-row: 6"></div>
+            <div class="barStart" style="grid-row: 7"></div>
+            <div class="barStart" style="grid-row: 8"></div>
+            <div class="barStart" style="grid-row: 9"></div>
+            <div class="barStart" style="grid-row: 10"></div>
+            <div class="barStart" style="grid-row: 11"></div>
+          </div>
+        </div>
+        <div class="skillsTxt">
+          <div class="skillsBkgTxt">&lt;Skills /&gt;</div>
+          <article class="skillsArticle">
+            <h2>Skills</h2>
+            <p>
+              As a <span class="colorMe">College student</span>, I have been
+              consistently exposed to several fields in computer science such as
+              <span class="colorMe"
+                >machine learning, data science, software development, operating
+                systems, assembly language</span
+              >
+              and so many other fields, alot of which have caught my interest.
+              Being exposed to so many fields as made it possible for me to
+              assimilate several programming languages pretty easily. The below
+              are skills I use most often
+            </p>
+            <div class="containSkillImg">
+              <div class="skill-item">
+                <img
+                  src="https://seeklogo.com/images/C/c-programming-language-logo-9B32D017B1-seeklogo.com.png"
+                  alt="c"
+                />
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://images.vexels.com/media/users/3/166253/isolated/preview/14bc03b7b1c2c4e2656fd4c0a981cbbc-cpp-programming-language-icon-by-vexels.png"
+                  alt="c++"
+                />
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Javascript-shield.svg/1200px-Javascript-shield.svg.png"
+                  alt="javascript"
+                />
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cdn.freebiesupply.com/logos/large/2x/css-3-logo-png-transparent.png"
+                  alt="css"
+                />
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://images.vexels.com/media/users/3/166383/isolated/preview/6024bc5746d7436c727825dc4fc23c22-html-programming-language-icon-by-vexels.png"
+                  alt="html"
+                />
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://image.flaticon.com/icons/png/512/919/919851.png"
+                  alt="react"
+                />
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://aca.am/assets/img/nodejs/node-js-icon.png"
+                  alt="node.js"
+                />
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://justinlross.com.au/wp-content/uploads/2018/04/python-logo.png"
+                  alt="python"
+                />
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://cms-assets.tutsplus.com/uploads/users/1116/posts/24835/preview_image/mongodb-logo.png"
+                  alt="mongodb"
+                />
+              </div>
+              <div class="skill-item">
+                <img
+                  src="https://microblock.app/images/logo/firebase-logo.png"
+                  alt="firebase"
+                />
+              </div>
+            </div>
+            <button class="githubLink">Check out my github</button>
+          </article>
+        </div>
+
+        <i class="las la-angle-left direction2"></i>
+        <i class="las la-angle-left direction3"></i>
+        <div class="pageRadio2">
+          <input type="radio" name="selected2" class="selectedPage2" />
+          <input type="radio" name="selected2" class="selectedPage2" />
+        </div>
+      </section>
+    </div>
+    <!-- page 4 -->
+    <div class="projects panel" id="projects">
+      <section class="containProjects">
+        <!-- creates the grid lines behind -->
+
+        <h1 class="projectPageTitle">&lt;Projects /&gt;</h1>
+        <!-- carousel being targetted by the projectList.js file -->
+        <div class="carousel">
+          <canvas class="gridLines"></canvas>
+        </div>
+        <div class="containProjectOptions">
+          <i class="fa fa-angle-up up" style="grid-area: up"></i>
+          <div class="projectChkBox">
+            <i class="fa fa-angle-left left-opt"></i>
+            <i class="fa fa-angle-right right-opt"></i>
+          </div>
+          <i class="fa fa-angle-down down" style="grid-area: down"></i>
+        </div>
+      </section>
+    </div>
+
+    <!-- project overview screen -->
+    <div class="overview">
+      <div class="linearIn" style="background-color: #202020"></div>
+      <div class="linearIn" style="background-color: #404040"></div>
+      <div class="linearIn" style="background-color: #808080"></div>
+      <div class="linearIn" style="background-color: #c0c0c0"></div>
+      <div class="linearIn mainScreen" style="background-color: #e0e0e0">
+        <nav class="return">
+          <button class="back"><i class="las la-angle-left"></i> BACK</button>
+        </nav>
+        <div class="container"></div>
+      </div>
+    </div>
+
+    <!-- page 5 -->
+    <div
+  class="contactMe panel"
+  id="contactMe"
+>
+  <section class="containContactMe">
+
+    <div class="map" > <div id="map" style="width: 100%;height: 100%;"></div></div>  
+    <div class="contactMeTxt">
+
+      <div class="contactMeBkgText">
+         &lt;Contact Me /&gt;
+      </div>
+      <article class="contactForm">
+        <h2 class="formH">Send me a message.</h2>
+        <form method="POST" name="sendmessage" netlify>
+          <label for="name" class="formLabel">Name<sup>*</sup> </label>
+          <input name="name" id="name" type="text" class="entry">
+          <label for="email" class="formLabel">Email<sup>*</sup> </label>
+          <input name="email" id="email" type="text" class="entry">
+          <label for="message" class="formLabel">Message<sup>*</sup> </label>
+          <textarea style="resize: none;" class="entry" id="message" name="message"></textarea>
+          <button class="sendMessage">Send</button>
+        </form>
+      </article>
+    </div>
+
+    <i class="las la-angle-left direction5"></i>
+    <i class="las la-angle-left direction6"></i>
+    <div class="pageRadio3">
+      <input type="radio" name="selected3" class="selectedPage3">
+      <input type="radio" name="selected3" class="selectedPage3">
+    </div>
+  </section>
+</div>
+    <!-- external scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/ScrollTrigger.min.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+
+    <!-- my scripts -->
+    <script src="scrollTo.js"></script>
+    <script src="projectInfoClass.js"></script>
+    <script src="projectWriteups.js"></script>
+    <script src="gridLines.js"></script>
+    <script src="skillsBkgAnimation.js"></script>
+    <script src="fillOptionBar.js"></script>
+    <script src="handleResize.js"></script>
+    <script src="time_of_day_bkg.js"></script>
+    <script src="animation.js"></script>
+    <script src="downloadResume.js"></script>
+    <script src="handleViewGit.js"></script>
+    <script src="theBars.js"></script>
+    <script src="projectList.js"></script>
+    <script src="location.js"></script>
+
+  </body>
+</html>
