@@ -122,6 +122,7 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   transition: 0.3s;
+  isolation: isolate;
 }
 .optionBar > div {
   padding: 1rem;
