@@ -1,16 +1,18 @@
 //lets quickly set the min-height of all panels to max screen height
 function resizePanels() {
-  document.querySelectorAll(".panel").forEach((i) => {
-    if (
-      screen.height - (window.outerHeight - window.innerHeight) + 15 >
-      window.innerHeight
-    ) {
-      i.style.minHeight =
-        screen.height - (window.outerHeight - window.innerHeight) + 15 + "px";
-    } else {
-      i.style.minHeight = window.innerHeight + "px";
-    }
-  });
+  if (screen.width > 500) {
+    document.querySelectorAll(".panel").forEach((i) => {
+      if (
+        screen.height - (window.outerHeight - window.innerHeight) + 15 >
+        window.innerHeight
+      ) {
+        i.style.minHeight =
+          screen.height - (window.outerHeight - window.innerHeight) + 15 + "px";
+      } else {
+        i.style.minHeight = window.innerHeight + "px";
+      }
+    });
+  }
 }
 resizePanels();
 
