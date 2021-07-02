@@ -247,7 +247,7 @@ function showOverviewPage({
     if (!unit) obj.height = temp * ratio;
     else obj.style.height = temp * ratio + unit;
   }
-  if (url.indexOf("http://www.youtube.com/embed") !== -1) {
+  if (url.indexOf("https://www.youtube.com/embed") !== -1) {
     const createDemo = document.createElement("iframe");
     createDemo.classList.add("designIframe");
 
