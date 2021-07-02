@@ -27,7 +27,6 @@ body {
   color: white;
   font-size: 3em !important;
   padding: 1rem;
-  /* z-index: 600; */
 }
 .bkg {
   background-size: cover;
@@ -36,8 +35,9 @@ body {
   height: 100%;
 
   display: flex;
-  /* justify-content: center; */
+
   align-items: center;
+  isolation: isolate;
 }
 
 .blur {
@@ -82,6 +82,7 @@ body {
 
   justify-content: center;
   display: flex;
+  z-index: -1;
 }
 .fixed {
   position: fixed;
@@ -92,13 +93,12 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* background-color: rgba(31, 31, 31, 0.5); */
+
   transform: translateZ(1rem);
   position: relative;
-  /* z-index: 0; */
-  /* filter: invert(1); */
+
   padding: 4rem;
-  /* border: 2px solid var(--bkg); */
+
   color: white;
 }
 .icon {
@@ -124,9 +124,6 @@ body {
   flex-direction: column;
   box-sizing: border-box;
   transition: 0.3s;
-  /* isolation: isolate;
-  z-index: var(--MaxZindex); */
-  /* z-index: 50; */
 }
 .optionBar > div {
   padding: 1rem;
