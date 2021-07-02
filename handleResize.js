@@ -13,7 +13,8 @@ function resizePanels() {
       }
     });
   } else {
-    i.style.minHeight = screen.height + "px";
+    i.style.minHeight =
+      Math.max(window.innerHeight, document.body.clientHeight) + "px";
   }
 }
 resizePanels();
