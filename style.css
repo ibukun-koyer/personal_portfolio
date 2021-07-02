@@ -123,6 +123,7 @@ body {
   box-sizing: border-box;
   transition: 0.3s;
   isolation: isolate;
+  z-index: 50;
 }
 .optionBar > div {
   padding: 1rem;
