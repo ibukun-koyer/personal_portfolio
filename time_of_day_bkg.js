@@ -78,6 +78,7 @@ function change_bkg() {
       imageBkg1.style.backgroundColor = image[i].nameBkg;
       imageBkg2.style.backgroundColor = image[i].iconColor;
       graphHolder.style.backgroundColor = image[i].iconColor;
+      prevI = i;
     }
   }
 
