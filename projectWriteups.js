@@ -365,3 +365,42 @@ const Chess = new ProjectInfo(
     }
   )
 );
+const MinorityProgrammingAssociation = new ProjectInfo(
+  "Minority Programming Association",
+  "Ibukun Adekoya",
+  "7th July, 2021",
+  ["React", "CSS"],
+  "This react application was an application created as a part of an interview process. The test required me to create a custom home/landing page, but we were then given a figma diagram that showed me what the other pages would look like and we were given four business days to complete the project.",
+  "Below is a live link demo to the application:",
+  "https://nostalgic-brown-84a9ec.netlify.app",
+  absolutePath("mpa.PNG"),
+  "https://github.com/ibukun-koyer/Minority-Programmers-Front-End-Test",
+  "",
+  createRunInfo(
+    {
+      header: "Accessing it online",
+      text: "Since this application has been hosted online, you could simply access the below link. In the event that you utilize this step, you could skip the underneath steps. ",
+      code: "https://nostalgic-brown-84a9ec.netlify.app",
+    },
+    {
+      header: "Cloning the directory",
+      text: "To begin this process, we need to clone the repository from Github. To do this, copy the below code to:",
+      code: "git clone https://github.com/ibukun-koyer/Minority-Programmers-Front-End-Test",
+    },
+    {
+      header: "Installing dependencies",
+      text: "Given that this is a node.js project, a package.json file would be included when you clone. Therefore installing dependencies would simply require you writing the below line into your terminal:",
+      code: "npm i",
+    },
+    {
+      header: "Executing the app",
+      text: "After executing the above lines of code, you are now ready to start up the application. To start up the application, enter the below line of code into your terminal:",
+      code: "npm start",
+    },
+    {
+      header: "Viewing the app",
+      text: "To view the application, simply visit the below link if the link isn't automatically opened:",
+      code: "http://localhost:3000",
+    }
+  )
+);

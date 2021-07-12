@@ -42,16 +42,14 @@ function createDisplayIcon(type, data) {
 let startId = 0;
 let idName = "project";
 
-//links:
-// -> rock paper scissors: https://rock-paper-scissors-9da14.web.app/
-//->netflix clone:  https://netflix-clone-8d4f9.web.app/
-//instagram: https://instagram-clone-13f87.web.app/
-//chess: https://chess-2d0bd.web.app/
-//monopoly has been screen recorded and committed --> https://youtu.be/lnorLBd0CXQ
-//whatsapp has been screen recorded and committed --> https://youtu.be/AmY5EjceX9E
-//project notebook has been screen recorded and committed --> https://youtu.be/2OAYUeY2bIU
-//covid vis has been screen recorded and commited --> https://youtu.be/VNkQ2EFJf58
 const projects = [
+  {
+    pageTitle: "MPA",
+    state: 2,
+    pageInfo: () => "",
+    displsyIconHTML: createDisplayIcon(0, "./media/mpa.PNG"),
+    pageData: MinorityProgrammingAssociation,
+  },
   {
     pageTitle: "Project <span class='italic noBold'>Notebook</span>",
     state: 1,
