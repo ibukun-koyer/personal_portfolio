@@ -46,7 +46,7 @@ function drawBasedOnAxis(axis, inc, color) {
 
 function drawGridLines() {
   let inc = 10;
-  let lineColor = "rgba(255, 255, 255, 0.2)";
+  let lineColor = " rgba(74, 74, 74, 0.04)";
   drawBasedOnAxis("X", inc, lineColor);
   drawBasedOnAxis("y", inc, lineColor);
 }

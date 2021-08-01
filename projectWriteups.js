@@ -156,13 +156,18 @@ const Whatsapp = new ProjectInfo(
   "Ibukun Adekoya",
   "30th June, 2021",
   ["React", "CSS", "Firebase"],
-  "This application as stated previously is still in development. The aim of this application is to create a direct copy of the whatsapp application. Mind you, some functionalities have been altered, for example, users need to create an account using email addresses, and they need to add new contacts inside the application. So far, I have managed to get the signup, login and password recovery pages to work by using firebase built-in authentication system. I have also been able to create a responsive whatsapp homepage by using css and js. Also users are able to create groups and create contacts. Users are then able to send images, video, text messages, and replies to contacts and contacts can read messages as they come in. All of the messaging system was built using react and firebase. That said, some functionalities are still in the work, some of which include, logging out, sending messages to group contacts, updating user profile and getting live updates on the all messages page. Be on the lookout for this functionalities if you are keeping up with this project.",
-  'The below video demo shows very basic functionalities discussed above, but fails to showcase all the implemented functionalities available such as responsiveness testing, sending videos to users, replying images, and a test between two contacts to show that the read functionality alongside the update chat messages works properly, to test this program yourself be sure to check out the "how to run" section.',
-  createEmbed("AmY5EjceX9E"),
-  undefined,
+  "This application is now a completed application. The aim of this application is to create a direct copy of the whatsapp application. This application allows users to sign-up, log-in, or recover password, all of these functionalities were hosted using firebases authentication system. Next, users are allowed to add new contacts (contacts that already exist in the ecosystem.), and they are also allowed to create a group chat consisting of their contacts only. Users of these applications can send messages to and fro all thanks to the firebase realtime database, and can also share images and videos which are saved on cloudinary and the link is saved onto firebase. Users can change their status, their names and their display pictures. Finally, they can logout and their is a live update on the status of the contact that leaves. That said, new functionalities like notifications and database and cloudinary optimizations are currently in the works and would be integrated when they are ready. ",
+  "To properly test this application, you would need to create an additional account to be able to chat. That said, for basic chat testing and contact creation, you could add any/both of this two emails as contacts, <span class='unique'>ji81778@umbc.edu</span> and/or <span class='unique'>iqttgydbo@umbc.edu</span>. Below is a live link demo to the application:",
+  "https://whatsapp-b8ba4.web.app/",
+  absolutePath("whatsapp.PNG"),
   "https://github.com/ibukun-koyer/whatsapp_clone",
   "",
   createRunInfo(
+    {
+      header: "Accessing it online",
+      text: "Since this application has been hosted online, you could simply access the below link. If you use this step, you could skip the below steps",
+      code: "https://whatsapp-b8ba4.web.app/",
+    },
     {
       header: "Cloning the directory",
       text: "To begin this process, we need to clone the repository from Github. To do this, copy the below code to:",

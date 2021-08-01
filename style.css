@@ -1,6 +1,6 @@
 :root {
   --bkg: rgb(31, 31, 31);
-  --bkg2: #c0c0c0;
+  --bkg2: #e9ecef;
   --bkg2Transparent: rgb(192, 192, 192, 0);
   --bkg2TransparentMid: rgb(192, 192, 192, 0.6);
   --connect-width: 5rem;
@@ -434,6 +434,7 @@ body {
   font-family: inherit;
   margin-top: 1rem;
   transition: 0.5s;
+  cursor: pointer;
 }
 .resumeDownload:hover,
 .githubLink:hover,
@@ -558,6 +559,10 @@ body {
     ". . x1 x2 x3 ."
     ". . . . . .";
 }
+.experience {
+  /* font-family: "Great Vibes", cursive; */
+  font-size: 1.5rem;
+}
 .graphLanguages,
 .experience {
   justify-self: center;
@@ -645,6 +650,7 @@ body {
   --bigProjectFont: calc(2vw + 1rem);
   --smallProjectFont: calc(1.5vw + 1rem);
 }
+
 .projects {
   width: 100%;
   min-height: 100vh;
@@ -675,6 +681,7 @@ body {
   overflow: hidden;
 }
 .carousel-item {
+  position: relative;
   width: var(--carouselWidth);
   height: 100%;
   display: flex;
@@ -730,6 +737,14 @@ body {
 .earlyStage {
   color: red;
 }
+.full-project-progress-bar {
+  width: 60%;
+  background-color: rgb(180, 179, 179);
+  height: 100%;
+  border-radius: 2rem;
+  overflow: hidden;
+  max-width: 20rem;
+}
 .gridLines {
   position: absolute;
   top: 0;
@@ -777,6 +792,13 @@ body {
   box-sizing: border-box;
   padding: 5rem;
 }
+.project-progress-bar {
+  /* width: 100%; */
+  width: 0;
+  height: 100%;
+  background-color: #52b788;
+  transition: width 0.4s;
+}
 .projectChkBox {
   grid-area: checkbox;
   width: 100%;
@@ -797,7 +819,6 @@ body {
 }
 .project-notebook {
   background-image: linear-gradient(to left, pink, greenyellow);
-  /* background-attachment: fixed; */
 
   font-size: 3rem;
   background-clip: text;
@@ -809,8 +830,8 @@ body {
   font-size: calc(2vw + 2rem);
   margin: 0;
   user-select: none;
-  /* margin-bottom: 2rem; */
-  color: rgba(255, 255, 255, 0.5);
+
+  color: rgba(74, 74, 74, 0.2);
 }
 .reportMargin {
   margin-top: 2rem;
@@ -853,6 +874,14 @@ body {
   transform: scale(1.5);
   transition: 0.3s ease-out;
 }
+.wrap-project-progress-bar {
+  margin-top: 1rem;
+  width: 100%;
+
+  height: 6px;
+  display: flex;
+  justify-content: center;
+}
 /* overview page */
 :root {
   --rgbNumber: 74;
@@ -865,13 +894,14 @@ body {
   );
   --uniqueColor: #49b293;
   --containerWidth: 80%;
-  --heightOfScreenShot: var(--containerWidth);
+  --heightOfScreenShot: 100%;
   --languageBarPad: 0.3rem;
   --biggestFontSize: 4rem;
   --midFontSize: 2.5rem;
   --smallFontSize: 1.5rem;
   --xsmallFontSize: 1.2rem;
   --cardBkgColor: var(--uniqueColor);
+  --demo-shadow: 0 0 32px 5px rgba(0, 0, 0, 0.3);
 }
 .aboutProjHeader {
   font-size: 2.5rem;
@@ -911,22 +941,34 @@ body {
   background-color: inherit;
 }
 .cardForDemo {
-  background-color: var(--cardBkgColor);
   border-radius: 1rem;
-  padding: 2rem;
   color: white;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  border: none;
+  box-shadow: var(--demo-shadow);
+  position: relative;
+  isolation: isolate;
 }
 .cardHeader {
   margin: 0;
+  position: absolute;
+  top: -0.5rem;
+  left: -0.5rem;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  background-color: var(--bkg);
+  box-shadow: var(--demo-shadow);
+  z-index: 5;
   font-size: calc(1rem + 2vw);
 }
 .centerDemo {
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 .codeSpace {
   width: 100%;
@@ -942,7 +984,6 @@ body {
 .container {
   width: var(--containerWidth);
   font-size: var(--xsmallFontSize);
-  /* line-height: 2; */
 }
 .container p {
   line-height: 2;
@@ -962,8 +1003,10 @@ body {
   opacity: 0;
 }
 .designIframe {
-  border: 1rem solid var(--cardBkgColor);
-  border-radius: 0.5rem;
+  /* border: 1rem solid var(--cardBkgColor); */
+  /* border-radius: 0.5rem; */
+  border: none;
+  box-shadow: var(--demo-shadow);
 }
 .docInfo,
 .langBorder {
@@ -1059,12 +1102,15 @@ body {
   padding: 1rem;
   box-sizing: border-box;
 }
+.unique {
+  color: var(--uniqueColor);
+}
 .username {
   color: var(--uniqueColor);
 }
 /* page 5 */
 :root {
-  --contactMeBkg: #c0c0c0;
+  --contactMeBkg: var(--bkg2);
 }
 
 .contactForm {
@@ -1084,12 +1130,6 @@ body {
 }
 .contactMeTxt {
   background-color: white;
-  /* background-image: radial-gradient(
-    circle at 0% 0%,
-    var(--bkg),
-    var(--bkg) 30%,
-    white 30%
-  ); */
 }
 .entry {
   background-color: inherit;

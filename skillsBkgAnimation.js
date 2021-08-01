@@ -20,7 +20,7 @@ function item(text) {
   };
 }
 
-let alpha = 0.2;
+let alpha = 0.4;
 let fillColor = `rgba(255, 255, 255, ${alpha})`;
 function initArray() {
   return [

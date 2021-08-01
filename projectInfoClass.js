@@ -23,5 +23,6 @@ class ProjectInfo {
     this.projectRepo = projectRepo;
     this.additionalGitText = additionalGitText;
     this.howToInstall = howToInstall;
+    this.custom_note = undefined;
   }
 }

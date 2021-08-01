@@ -44,11 +44,14 @@ let idName = "project";
 
 const projects = [
   {
-    pageTitle: "MPA",
+    pageTitle: "Whatsapp <span class='italic noBold'>Clone</span>",
     state: 2,
     pageInfo: () => "",
-    displsyIconHTML: createDisplayIcon(0, "./media/mpa.PNG"),
-    pageData: MinorityProgrammingAssociation,
+    displsyIconHTML: createDisplayIcon(
+      0,
+      "./images/alexander-shatov-_qsuER9xYOY-unsplash.jpg"
+    ),
+    pageData: Whatsapp,
   },
   {
     pageTitle: "Project <span class='italic noBold'>Notebook</span>",
@@ -59,36 +62,6 @@ const projects = [
       "<div class='project-notebook'>Project Notebook</div>"
     ),
     pageData: ProjectNotebook,
-  },
-  {
-    pageTitle: "Rock, paper, scissors",
-    state: 2,
-    pageInfo: () => "",
-    displsyIconHTML: createDisplayIcon(
-      0,
-      "https://static.vecteezy.com/system/resources/previews/000/690/876/original/rock-paper-scissors-vector-design.jpg"
-    ),
-    pageData: RockPaperScissors,
-  },
-  {
-    pageTitle: "Whatsapp <span class='italic noBold'>Clone</span>",
-    state: 1,
-    pageInfo: () => "",
-    displsyIconHTML: createDisplayIcon(
-      0,
-      "./images/alexander-shatov-_qsuER9xYOY-unsplash.jpg"
-    ),
-    pageData: Whatsapp,
-  },
-  {
-    pageTitle: "Monopoly <span class='italic noBold'>Emulator</span>",
-    state: 2,
-    pageInfo: () => "",
-    displsyIconHTML: createDisplayIcon(
-      0,
-      "./images/joshua-hoehne-Ey7i2tHVV5E-unsplash.jpg"
-    ),
-    pageData: Monopoly,
   },
   {
     pageTitle: "Netflix <span class='italic noBold'>Clone</span>",
@@ -110,7 +83,34 @@ const projects = [
     ),
     pageData: Instagram,
   },
+  {
+    pageTitle: "MPA",
+    state: 2,
+    pageInfo: () => "",
+    displsyIconHTML: createDisplayIcon(0, "./media/mpa.PNG"),
+    pageData: MinorityProgrammingAssociation,
+  },
+  {
+    pageTitle: "Rock, paper, scissors",
+    state: 2,
+    pageInfo: () => "",
+    displsyIconHTML: createDisplayIcon(
+      0,
+      "https://static.vecteezy.com/system/resources/previews/000/690/876/original/rock-paper-scissors-vector-design.jpg"
+    ),
+    pageData: RockPaperScissors,
+  },
 
+  {
+    pageTitle: "Monopoly <span class='italic noBold'>Emulator</span>",
+    state: 2,
+    pageInfo: () => "",
+    displsyIconHTML: createDisplayIcon(
+      0,
+      "./images/joshua-hoehne-Ey7i2tHVV5E-unsplash.jpg"
+    ),
+    pageData: Monopoly,
+  },
   {
     pageTitle: "Covid <div class='italic noBold'>Vis - Cali</div>",
     state: 2,
@@ -178,6 +178,7 @@ function showOverviewPage({
   projectRepo,
   additionalGitText,
   howToInstall,
+  custom_note,
 }) {
   toggleShow();
   const doc = document.querySelector(".container");
@@ -209,102 +210,106 @@ function showOverviewPage({
     languagesUsed.append(aLang);
   }
   doc.append(languagesUsed);
-  //about the project
-  //------------------------------------------------------------------->about project paragraph
-  const [aboutProjHeader, aboutProj] = createSection(
-    "About project",
-    aboutProjParagraph
-  );
-  doc.append(aboutProjHeader, aboutProj);
-  //about the demo and demo link/video
-  //------------------------------------------------------------------->demo paragraph
-  const [demoHeader, demo] = createSection("Demo", demoParagraph);
-
-  //------------------------------------------------------------------->url for link or video
-  //------------------------------------------------------------------->screenshot if link is used
-
-  let url = urlForLinkOrVideo;
-  let image = screenshot;
-
-  const wrapDemo = document.createElement("div");
-  wrapDemo.classList.add("centerDemo");
-  let maxWidth = 720;
-  //resize function for iframe
-  function resize_iframe(obj, unit, ratio) {
-    let temp = parseFloat(window.getComputedStyle(doc).width);
-
-    if (temp > maxWidth) {
-      temp = maxWidth;
-      if (unit == "") obj.width = maxWidth;
-      else obj.style.width = maxWidth + unit;
-    } else {
-      if (unit == "") obj.width = temp;
-      else obj.style.width = temp + unit;
-    }
-
-    if (!unit) obj.height = temp * ratio;
-    else obj.style.height = temp * ratio + unit;
-  }
-  if (url.indexOf("https://www.youtube.com/embed") !== -1) {
-    const createDemo = document.createElement("iframe");
-    createDemo.classList.add("designIframe");
-
-    createDemo.allowFullscreen = true;
-    createDemo.style.margin = "auto";
-    resize_iframe(createDemo, "", 9 / 16);
-    window.addEventListener("resize", () => {
-      resize_iframe(createDemo, "", 9 / 16);
-    });
-    createDemo.style.objectFit = "contain";
-    createDemo.src = url;
-    //append
-    wrapDemo.append(createDemo);
+  if (custom_note) {
+    custom_note(doc);
   } else {
-    //anchor tag for redirection
-    const sizeRatio = 12 / 16;
-    const card = document.createElement("div");
-    resize_iframe(card, "px", sizeRatio);
-    window.addEventListener("resize", () => {
+    //about the project
+    //------------------------------------------------------------------->about project paragraph
+    const [aboutProjHeader, aboutProj] = createSection(
+      "About project",
+      aboutProjParagraph
+    );
+    doc.append(aboutProjHeader, aboutProj);
+    //about the demo and demo link/video
+    //------------------------------------------------------------------->demo paragraph
+    const [demoHeader, demo] = createSection("Demo", demoParagraph);
+
+    //------------------------------------------------------------------->url for link or video
+    //------------------------------------------------------------------->screenshot if link is used
+
+    let url = urlForLinkOrVideo;
+    let image = screenshot;
+
+    const wrapDemo = document.createElement("div");
+    wrapDemo.classList.add("centerDemo");
+    let maxWidth = 720;
+    //resize function for iframe
+    function resize_iframe(obj, unit, ratio) {
+      let temp = parseFloat(window.getComputedStyle(doc).width);
+
+      if (temp > maxWidth) {
+        temp = maxWidth;
+        if (unit == "") obj.width = maxWidth;
+        else obj.style.width = maxWidth + unit;
+      } else {
+        if (unit == "") obj.width = temp;
+        else obj.style.width = temp + unit;
+      }
+
+      if (!unit) obj.height = temp * ratio;
+      else obj.style.height = temp * ratio + unit;
+    }
+    if (url.indexOf("https://www.youtube.com/embed") !== -1) {
+      const createDemo = document.createElement("iframe");
+      createDemo.classList.add("designIframe");
+
+      createDemo.allowFullscreen = true;
+      createDemo.style.margin = "auto";
+      resize_iframe(createDemo, "", 9 / 16);
+      window.addEventListener("resize", () => {
+        resize_iframe(createDemo, "", 9 / 16);
+      });
+      createDemo.style.objectFit = "contain";
+      createDemo.src = url;
+      //append
+      wrapDemo.append(createDemo);
+    } else {
+      //anchor tag for redirection
+      const sizeRatio = 9 / 16;
+      const card = document.createElement("div");
       resize_iframe(card, "px", sizeRatio);
-    });
-    //add items into the sec
-    const cardHeader = document.createElement("h3");
-    cardHeader.classList.add("cardHeader");
-    cardHeader.innerText = "Try it yourself";
-    card.append(cardHeader);
-    //the ref
-    const create_link = document.createElement("a");
-    create_link.href = url;
-    create_link.target = "_blank";
-    create_link.classList.add("anchor");
+      window.addEventListener("resize", () => {
+        resize_iframe(card, "px", sizeRatio);
+      });
+      //add items into the sec
+      const cardHeader = document.createElement("h3");
+      cardHeader.classList.add("cardHeader");
+      cardHeader.innerText = "Try it yourself";
+      card.append(cardHeader);
+      //the ref
+      const create_link = document.createElement("a");
+      create_link.href = url;
+      create_link.target = "_blank";
+      create_link.classList.add("anchor");
 
-    card.append(create_link);
+      card.append(create_link);
 
-    //image screenshot
-    const create_poster = document.createElement("img");
-    create_poster.classList.add("poster");
-    create_poster.src = image;
-    create_poster.alt = "demo screenshot";
-    create_link.append(create_poster);
+      //image screenshot
+      const create_poster = document.createElement("img");
+      create_poster.classList.add("poster");
+      create_poster.src = image;
+      create_poster.alt = "demo screenshot";
+      create_link.append(create_poster);
 
-    card.classList.add("cardForDemo");
-    wrapDemo.append(card);
+      card.classList.add("cardForDemo");
+      wrapDemo.append(card);
+    }
+    doc.append(demoHeader, demo, wrapDemo);
+    //github link
+    //------------------------------------------------------------------->github repoitory for project
+    //------------------------------------------------------------------->additional text to the current
+    const github = document.createElement("p");
+    github.innerHTML =
+      `To access the source code for this project, visit the <a href="${projectRepo}" target="_blank" class="git">Github repository</a>. ` +
+      additionalGitText;
+    doc.append(github);
+    //how to install
+    //------------------------------------------------------------------->paragraph on how to install or run the project
+    const [installHeader, install] = createSection("How to run", howToInstall);
+    install.style.marginBottom = "5rem";
+
+    doc.append(installHeader, install);
   }
-  doc.append(demoHeader, demo, wrapDemo);
-  //github link
-  //------------------------------------------------------------------->github repoitory for project
-  //------------------------------------------------------------------->additional text to the current
-  const github = document.createElement("p");
-  github.innerHTML =
-    `To access the source code for this project, visit the <a href="${projectRepo}" target="_blank" class="git">Github repository</a>. ` +
-    additionalGitText;
-  doc.append(github);
-  //how to install
-  //------------------------------------------------------------------->paragraph on how to install or run the project
-  const [installHeader, install] = createSection("How to run", howToInstall);
-  install.style.marginBottom = "5rem";
-
-  doc.append(installHeader, install);
 }
 
 function calculateBigScreen(projects) {
@@ -415,6 +420,7 @@ function initializeViewer() {
   function performUpdates() {
     initializeArrows();
     updateCheckArrow();
+    keepingTrack();
   }
   function enable_disable(arg1, arg2, arrowa, arrowb) {
     if (arg1) {
@@ -624,18 +630,27 @@ function initializeViewer() {
       arrow
     );
   }
+  function keepingTrack() {
+    document.querySelector(".project-progress-bar").style.width = `${
+      (currentProject / (projects.length - 1)) * 100
+    }%`;
+  }
   //event listeners for objects in this function
   leftArrow.addEventListener("click", () => {
     handleCheckArrows(leftArrow);
+    // keepingTrack();
   });
   rightArrow.addEventListener("click", () => {
     handleCheckArrows(rightArrow);
+    // keepingTrack();
   });
   nextArrow.addEventListener("click", () => {
     handleChanges(nextArrow);
+    // keepingTrack();
   });
   prevArrow.addEventListener("click", () => {
     handleChanges(prevArrow);
+    // keepingTrack();
   });
 }
 
