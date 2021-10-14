@@ -64,6 +64,13 @@ const projects = [
     pageData: ProjectNotebook,
   },
   {
+    pageTitle: "MPA",
+    state: 2,
+    pageInfo: () => "",
+    displsyIconHTML: createDisplayIcon(0, "./media/mpa.PNG"),
+    pageData: MinorityProgrammingAssociation,
+  },
+  {
     pageTitle: "Netflix <span class='italic noBold'>Clone</span>",
     state: 2,
     pageInfo: () => "",
@@ -74,21 +81,11 @@ const projects = [
     pageData: Netflix,
   },
   {
-    pageTitle: "Instagram <span class='italic noBold'>Login page</span>",
+    pageTitle: "Covid <div class='italic noBold'>Vis - Cali</div>",
     state: 2,
     pageInfo: () => "",
-    displsyIconHTML: createDisplayIcon(
-      0,
-      "./images/alexander-shatov-71Qk8ODIBko-unsplash.jpg"
-    ),
-    pageData: Instagram,
-  },
-  {
-    pageTitle: "MPA",
-    state: 2,
-    pageInfo: () => "",
-    displsyIconHTML: createDisplayIcon(0, "./media/mpa.PNG"),
-    pageData: MinorityProgrammingAssociation,
+    displsyIconHTML: createDisplayIcon(0, "./images/covid.png"),
+    pageData: Covid,
   },
   {
     pageTitle: "Rock, paper, scissors",
@@ -99,6 +96,16 @@ const projects = [
       "https://static.vecteezy.com/system/resources/previews/000/690/876/original/rock-paper-scissors-vector-design.jpg"
     ),
     pageData: RockPaperScissors,
+  },
+  {
+    pageTitle: "Instagram <span class='italic noBold'>Login page</span>",
+    state: 2,
+    pageInfo: () => "",
+    displsyIconHTML: createDisplayIcon(
+      0,
+      "./images/alexander-shatov-71Qk8ODIBko-unsplash.jpg"
+    ),
+    pageData: Instagram,
   },
 
   {
@@ -111,13 +118,7 @@ const projects = [
     ),
     pageData: Monopoly,
   },
-  {
-    pageTitle: "Covid <div class='italic noBold'>Vis - Cali</div>",
-    state: 2,
-    pageInfo: () => "",
-    displsyIconHTML: createDisplayIcon(0, "./images/covid.png"),
-    pageData: Covid,
-  },
+
   {
     pageTitle: "Chess <div class='italic noBold'>Clone</div>",
     state: 2,

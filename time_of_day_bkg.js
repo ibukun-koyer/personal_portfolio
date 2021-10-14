@@ -13,7 +13,7 @@ const image = {
     image_class: "day",
     nameBkg: "#23c9ff",
     iconColor: "#e2fdff",
-    tag: "white",
+    tag: "#e2fdff",
   },
   sunset: {
     start: 18,
@@ -69,8 +69,8 @@ function change_bkg() {
       //get map
       const map = document.querySelector(".containContactMe");
 
-      map.style.border = `4px solid ${image[i].iconColor}`;
-
+      map.style.border = `10px solid var(--bkg2TransparentMid)`;
+      document.body.style.setProperty("--uniqueColor", image[i].nameBkg);
       bkg.setAttribute("class", "panel bkg");
       bkg.classList.add(image[i].image_class);
       name.style.backgroundColor = image[i].nameBkg;

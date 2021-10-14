@@ -20,8 +20,8 @@ function item(text) {
   };
 }
 
-let alpha = 0.4;
-let fillColor = `rgba(255, 255, 255, ${alpha})`;
+let alpha = 0.1;
+let fillColor = `rgba(72, 72, 72, ${alpha})`;
 function initArray() {
   return [
     item("HTML"),
@@ -41,7 +41,7 @@ function drawText() {
   ctx.clearRect(0, 0, skillCanvas.width, skillCanvas.height);
   ctx.fillStyle = fillColor;
   for (let i of itemsOrig) {
-    ctx.font = `${i.fontSize}rem Arial`;
+    ctx.font = `${i.fontSize}rem Great Vibes`;
     let radius = (i.fontSize * 16 * i.text.length) / 2;
 
     if (i.x + radius >= skillCanvas.width) {

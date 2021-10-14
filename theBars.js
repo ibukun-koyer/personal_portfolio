@@ -1,4 +1,4 @@
-const pos = [80, 60, 90, 85, 90, 80, 70, 50, 50, 65]; //over 100%
+const pos = [80, 60, 90, 85, 90, 90, 70, 50, 50, 65]; //over 100%
 const allBars = document.querySelectorAll(".barStart");
 
 const color1 = getComputedStyle(document.body).getPropertyValue("--stage1");

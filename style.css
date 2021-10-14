@@ -1,6 +1,6 @@
 :root {
   --bkg: rgb(31, 31, 31);
-  --bkg2: #e9ecef;
+  --bkg2: #ffffff;
   --bkg2Transparent: rgb(192, 192, 192, 0);
   --bkg2TransparentMid: rgb(192, 192, 192, 0.6);
   --connect-width: 5rem;
@@ -274,6 +274,14 @@ body {
   width: 100%;
   overflow-x: hidden;
   background-color: var(--bkg2);
+  background: repeating-linear-gradient(
+    -45deg,
+    white,
+    white 40px,
+    var(--bkg) 40px,
+    rgb(220, 220, 220) 40px,
+    rgb(220, 220, 220) 60px
+  );
   min-height: 100vh;
 }
 .aboutMeArticle,
@@ -623,6 +631,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  cursor: pointer;
 }
 .skillsTxt {
   display: flex;
@@ -710,7 +719,7 @@ body {
 }
 
 .completed {
-  color: #52b788;
+  color: #03b662;
 }
 .containProjectOptions {
   width: 100%;
@@ -744,6 +753,8 @@ body {
   border-radius: 2rem;
   overflow: hidden;
   max-width: 20rem;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--bkg2TransparentMid);
 }
 .gridLines {
   position: absolute;
@@ -796,7 +807,7 @@ body {
   /* width: 100%; */
   width: 0;
   height: 100%;
-  background-color: #52b788;
+  background-color: #00ff88;
   transition: width 0.4s;
 }
 .projectChkBox {
@@ -842,7 +853,7 @@ body {
   color: var(--bkg);
 }
 .selectedProjectOutline {
-  border: 5px solid #52b788;
+  border: 1px solid #00ff88;
 
   box-sizing: border-box;
 }
@@ -1122,14 +1133,32 @@ body {
 }
 .contactMe {
   background-color: var(--contactMeBkg);
+  position: relative;
 }
 .containContactMe {
+  margin-top: 4rem;
   isolation: isolate;
   position: relative;
   border-radius: 0;
 }
 .contactMeTxt {
   background-color: white;
+}
+.copyright {
+  width: 100%;
+  /* background-color: rgb(150, 150, 150); */
+  padding-bottom: 0.3rem;
+  box-sizing: border-box;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--bkg);
+  padding-top: 0.3rem;
+}
+.cursive {
+  font-family: "Great Vibes", cursive;
+  font-size: 1.2rem;
 }
 .entry {
   background-color: inherit;
