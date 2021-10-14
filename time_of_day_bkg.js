@@ -45,7 +45,7 @@ function change_bkg() {
   } else {
     parsed_time = parsed_time === 12 ? (parsed_time += 12) : parsed_time;
   }
-
+  parsed_time = 18;
   function setDesign(i) {
     if (i !== prevI) {
       //get the bkg
