@@ -1,3 +1,4 @@
+let parsed_time_test = undefined;
 const image = {
   sunrise: {
     start: 5,
@@ -45,18 +46,21 @@ function change_bkg() {
   } else {
     parsed_time = parsed_time === 12 ? (parsed_time += 12) : parsed_time;
   }
+
+  if (
+    typeof parsed_time_test === "number" &&
+    parsed_time_test > 0 &&
+    parsed_time_test < 24
+  ) {
+    parsed_time = parsed_time_test;
+  }
   function setDesign(i) {
     if (i !== prevI) {
       //get the bkg
       const bkg = document.querySelector(".bkg");
-      //lets update bkg image based on time
 
       //get my name
       const name = document.querySelector(".myName");
-      //get icons container
-      const iconContainer = document.querySelectorAll(".connect i");
-      //get tag
-      const tags = document.querySelectorAll(".tag");
       //get spans that need coloring
       const spans = document.querySelectorAll(".colorMe");
       //get imageBkge 1

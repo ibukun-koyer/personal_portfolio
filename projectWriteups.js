@@ -409,3 +409,32 @@ const MinorityProgrammingAssociation = new ProjectInfo(
     }
   )
 );
+const AgentNology = new ProjectInfo(
+  "Agent Nology",
+  "Ibukun Adekoya",
+  "7th November, 2021",
+  ["HTML", "CSS", "Vanilla JS", "Canvas API"],
+  "This application was created for a hackathon submission. The aim of the project was to create an agent themed application, so my response to the prompt was to design a game in the web browser. This was a solid project for the hackathon not only because it was a perfect fit for the theme but it also allowed to work closely with the canvas API to create a game like application in the web without using external pluggins like Kaboom.js. The application so allows users to move around a 2D game boards allowing me to work closely with HTML and CSS screen positioning, using a config file to create an option page for the users and so on, and making use of a black and white image to create a collision 100 x 100 bit array. ",
+  "Below is a live link demo to the application:",
+  "https://nostalgic-kowalevski-0df7cf.netlify.app",
+  absolutePath("amongus.JPG"),
+  "https://github.com/ibukun-koyer/murder_mystery",
+  "",
+  createRunInfo(
+    {
+      header: "Accessing it online",
+      text: "Since this application has been hosted online, you could simply access the below link. In the event that you utilize this step, you could skip the underneath steps. ",
+      code: "https://nostalgic-kowalevski-0df7cf.netlify.app",
+    },
+    {
+      header: "Cloning the directory",
+      text: "To begin this process, we need to clone the repository from Github. To do this, copy the below code to:",
+      code: "git clone https://github.com/ibukun-koyer/murder_mystery",
+    },
+    {
+      header: "Viewing the app",
+      text: "To view the application, simply search for the below file in the directory and open it",
+      code: "index.html",
+    }
+  )
+);

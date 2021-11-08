@@ -33,6 +33,9 @@ function initArray() {
     item("C++"),
     item("Node.js"),
     item("MongoDB"),
+    item("Figma"),
+    item("Blender"),
+    item("Mysql"),
   ];
 }
 let itemsOrig = initArray();

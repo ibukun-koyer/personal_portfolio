@@ -54,6 +54,13 @@ const projects = [
     pageData: Whatsapp,
   },
   {
+    pageTitle: "Agent Nology",
+    state: 1,
+    pageInfo: () => "",
+    displsyIconHTML: createDisplayIcon(0, "./images/amongus2.jpg"),
+    pageData: AgentNology,
+  },
+  {
     pageTitle: "Project <span class='italic noBold'>Notebook</span>",
     state: 1,
     pageInfo: () => "",

@@ -482,6 +482,7 @@ body {
   justify-content: flex-end;
   flex-wrap: wrap;
   user-select: none;
+  gap: 5px;
 }
 .containSkillImg > .skill-item > img {
   width: var(--skillSize);
@@ -537,6 +538,15 @@ body {
 .fullBar10 {
   grid-area: fullBar10;
 }
+.fullBar11 {
+  grid-area: fullBar11;
+}
+.fullBar12 {
+  grid-area: fullBar12;
+}
+.fullBar13 {
+  grid-area: fullBar13;
+}
 .exp1 {
   grid-area: x1;
 }
@@ -552,7 +562,7 @@ body {
   height: 100%;
   display: grid;
   grid-template-columns: var(--graphPagePad) repeat(4, 1fr) var(--graphPagePad);
-  grid-template-rows: var(--graphPagePad) repeat(11, 1fr) var(--graphPagePad);
+  grid-template-rows: var(--graphPagePad) repeat(14, 1fr) var(--graphPagePad);
   grid-template-areas:
     ". . . . . ."
     ". y10 fullBar1 fullBar1  fullBar1 ."
@@ -565,11 +575,13 @@ body {
     ". y3 fullBar8 fullBar8 fullBar8 ."
     ". y2 fullBar9 fullBar9 fullBar9 ."
     ". y1 fullBar10 fullBar10 fullBar10 ."
+    ". y11 fullBar11 fullBar11 fullBar11 ."
+    ". y12 fullBar12 fullBar12 fullBar12 ."
+    ". y13 fullBar13 fullBar13 fullBar13 ."
     ". . x1 x2 x3 ."
     ". . . . . .";
 }
 .experience {
-  /* font-family: "Great Vibes", cursive; */
   font-size: 1.5rem;
 }
 .graphLanguages,
@@ -612,6 +624,15 @@ body {
 }
 .graphLoc10 {
   grid-area: y1;
+}
+.graphLoc11 {
+  grid-area: y11;
+}
+.graphLoc12 {
+  grid-area: y12;
+}
+.graphLoc13 {
+  grid-area: y13;
 }
 
 /* end of graph implementation */
